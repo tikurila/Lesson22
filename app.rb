@@ -18,4 +18,16 @@ end
 
 get '/visit' do
 	erb :visit
+end
+
+post '/visit' do
+
+	@username = params[:username]
+	@phone = params[:phone]
+	@data_time = params[:data_time]
+	@barber = params[:barber]
+
+	erb "Хорошо, #{@username},будем ждать вас #{@data_time} . Если что мы свяжемся с вами по номеру #{@phone} . Ваш парикмахер: #{@barber}"
 end	
+
+
